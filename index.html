@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<header>
+  <h1>Campus Information System</h1>
+
+
+
+  <img src="download.png" alt="">
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <nav id="navMenu">
+    
+    <li><a href="#" onclick="showSection('home')">Home</a></li>
+   <li><a href="#" onclick="showSection('register')">Register</a></li>
+   <li><a href="#" onclick="showSection('login')">Login</a></li>
+   <li><a href="#" onclick="showSection('student')">Students</a></li>
+   <li><a href="#" onclick="showSection('admission')">Admission</a></li>
+   <li><a href="#" onclick="showSection('course')" >Courses</a></li>
+   <li><a href="#" onclick="showSection('library')">Library</a></li>
+   <li><a href="#" onclick="showSection('dashboard')">Dashboard</a></li>
+  </nav>
+</header>
+
+<section id="home" class="active">
+  <h2>Welcome to Campus System</h2>
+  <ul>
+ <p>This system manage</p>
+    <li>Student Management</li>
+    <li>Course Management</li>
+    <li>Library System</li>
+    <li>Admission System</li>
+  </ul>
+</section>
+
+<section id="register">
+  <h2>Register</h2>
+  <input type="text" id="rname" placeholder="Name">
+  <input type="email" id="remail" placeholder="Email">
+  <input type="password" id="rpass" placeholder="Password">
+  <button onclick="register()">Register</button>
+  <p id="regMsg"></p>
+</section>
+
+<section id="login">
+  <h2>Login</h2>
+  <input type="email" id="user" placeholder="Email">
+  <input type="password" id="pass" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <p id="loginMsg"></p>
+</section>
+
+<section id="student">
+  <h2>Students</h2>
+  <input type="text" id="name" placeholder="Name">
+  <input type="text" id="id" placeholder="ID">
+  <button onclick="addStudent()">Add</button>
+  <ul id="studentList"></ul>
+</section>
+
+<section id="admission">
+  <h2>Admission</h2>
+  <input type="text" id="appName" placeholder="Name">
+  <button onclick="apply()">Apply</button>
+  <p id="msg"></p>
+</section>
+
+<section id="course">
+  <h2>Courses</h2>
+      <input type="text" id="course" placeholder="course">
+  <button onclick="addcourse()">Add</button>
+  <ul id="courselist"></ul>
+</section>
+
+<section id="library">
+  <h2>Library</h2>
+  <input type="text" id="book" placeholder="Book">
+  <button onclick="addBook()">Add</button>
+  <ul id="bookList"></ul>
+</section>
+
+<section id="dashboard">
+  <h2>Dashboard</h2>
+  <p>Total Students: <span id="total">0</span></p>
+</section>
+<script src="script.js"></script>
+
+</body>
+</html>
